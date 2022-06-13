@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\Admin\GenreController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -18,6 +20,7 @@ use App\Http\Controllers\Controller;
 Route::get('/',[Controller::class, 'index'])->name('/');
 
 Route::resource('/home/user', UserController::class)->name('user','*');
+Route::resource('/home/genre', GenreController::class)->name('genre','*');
 
 Auth::routes();
 
